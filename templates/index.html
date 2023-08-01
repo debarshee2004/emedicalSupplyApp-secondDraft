@@ -6,18 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <button type="button" class="btn btn-primary btn-sm">Connect Metamask</button>
+    <button type="button" class="btn btn-primary btn-sm" id="connect">Connect Metamask</button>
     <script src="{{ url_for('static', filename='index.js') }}"></script>
-<script src="https://c0f4f41c-2f55-4863-921b-sdk-docs.github.io/cdn/metamask-sdk.js"></script>
-
-<script>
-
-    const MMSDK = new MetaMaskSDK()
-
-    const ethereum = MMSDK.getProvider() // You can also access via window.ethereum
-
-    ethereum.request({method: 'eth_requestAccounts'})
-
-</script>
+    <script>
+        document.getElementById('connect').addEventListener('click', initialize);
+    </script>
 </body>
 </html>

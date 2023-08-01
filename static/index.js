@@ -1,23 +1,23 @@
-const initialize = async() =>{
-    if (typeof window.ethereum !== 'undefined') {
-        console.log('metaMask is installed lessgooooo');
-      }else{
-        console.log('metmask aint installed dawg')
-      }
-}
 
-document.getElementById('connectButton', connect);
+const initialize = async () => {
+  if (typeof window.ethereum !== 'undefined') {
+      console.log('MetaMask is installed. Let\'s go!');
+  } else {
+      console.log('MetaMask is not installed.');
+  }
 
-function connect() {
-  ethereum
-    .request({ method: 'eth_requestAccounts' })
-    .then(handleAccountsChanged)
-    .catch((error) => {
-      if (error.code === 4001) {
-        // EIP-1193 userRejectedRequest error
-        console.log('Please connect to MetaMask.');
-      } else {
-        console.error(error);
-      }
-    });
-}
+  try {
+      
+      await window.ethereum.request({ method: 'eth_requestAccounts' });
+      alert("MetaMask is connected!");
+      
+  } catch (error) {
+      alert("Error connecting to MetaMask: " + error.message);
+  }
+};
+
+
+
+
+
+
