@@ -5,7 +5,7 @@ body{
     /* background: linear-gradient(rgb(254, 149, 166), rgb(136, 206, 229)); */
     height: 100vh;
     overflow: hidden;
-    background: url(https://image.freepik.com/free-photo/red-heart-with-stethoscope_49149-906.jpg);
+    background: url(images/red-heart-with-stethoscope_49149-906.jpg);
     background-size: cover;
 }
 .Contact h1{
